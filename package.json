@@ -1,0 +1,20 @@
+{
+  "name": "puppeter-udemy",
+  "version": "1.0.0",
+  "description": "automated test with puppeter",
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/mocha/bin/mocha --timeout=30000 ./tests"
+  },
+  "repository": {
+    "type": "git",
+    "url": "github.com/tgerbeau/puppeteer"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^6.2.0",
+    "puppeteer": "^1.19.0"
+  }
+}
