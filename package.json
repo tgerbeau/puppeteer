@@ -1,5 +1,5 @@
 {
-  "name": "puppeter-udemy",
+  "name": "puppeteer-testing",
   "version": "1.0.0",
   "description": "automated test with puppeter",
   "main": "index.js",
@@ -16,5 +16,9 @@
     "chai": "^4.2.0",
     "mocha": "^6.2.0",
     "puppeteer": "^1.19.0"
-  }
+  },
+  "directories": {
+    "test": "tests"
+  },
+  "devDependencies": {}
 }
