@@ -4,6 +4,7 @@ const expect = require ('chai').expect
 const config = require ('../lib/config')
 const click = require ('../lib/helpers').click
 const typeText = require ('../lib/helpers').typeText
+const loadUrl = require ('../lib/helpers').loadUrl
 
 describe ('My first puppeteer', () => {
     let browser
@@ -29,7 +30,7 @@ describe ('My first puppeteer', () => {
      })
 
     it('My first test step', async () => {
-        await page.goto(config.baseUrl)
+        await loadUrl(page, config.baseUrl)
         await page.waitForSelector('#nav-search')
 
         const url = await page.url()
@@ -39,13 +40,13 @@ describe ('My first puppeteer', () => {
         expect(title).to.contain("Community")
     })
     it('click method',async () => {
-        await page.goto(config.baseUrl)
+        await loadUrl(page, config.baseUrl)
         await click (page, '#write-link') 
         await page.waitForSelector('.registration-rainbow')                 
     })
 
     it('type_something_in_search_bar', async () => {
-        await page.goto(config.baseUrl)
+        await loadUrl(page, config.baseUrl)
         await typeText (page,"something great here", '#nav-search')
         await page.keyboard.press('Enter')
         await page.waitForSelector('#articles-list')
