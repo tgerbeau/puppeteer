@@ -4,7 +4,7 @@
   "description": "automated test with puppeter",
   "main": "index.js",
   "scripts": {
-    "test": "./node_modules/mocha/bin/mocha --timeout=30000 ./tests"
+    "test": "./node_modules/mocha/bin/mocha --timeout=300000 ./tests"
   },
   "repository": {
     "type": "git",
@@ -14,6 +14,8 @@
   "license": "ISC",
   "dependencies": {
     "chai": "^4.2.0",
+    "jest": "^24.9.0",
+    "jest-image-snapshot": "^2.11.0",
     "mocha": "^6.2.0",
     "puppeteer": "^1.19.0"
   },
